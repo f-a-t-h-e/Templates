@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML And CSS Template 3</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Fonts -->
+    <style>
+        /* cairo-300 - latin */
+        @font-face {
+            /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-display: swap;
+            font-family: 'Cairo';
+            font-style: normal;
+            font-weight: 300;
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+            src: url('webfonts/cairo-v28-latin-300.woff2') format('woff2'),
+                /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+                url('webfonts/cairo-v28-latin-300.ttf') format('truetype');
+        }
+
+        /* cairo-regular - latin */
+        @font-face {
+            /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-display: swap;
+            font-family: 'Cairo';
+            font-style: normal;
+            font-weight: 400;
+            /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+            src: url('webfonts/cairo-v28-latin-regular.woff2') format('woff2'),
+                /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+                url('webfonts/cairo-v28-latin-regular.ttf') format('truetype');
+        }
+
+        /* cairo-700 - latin */
+        @font-face {
+            /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-display: swap;
+            font-family: 'Cairo';
+            font-style: normal;
+            font-weight: 700;
+            /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+            src: url('webfonts/cairo-v28-latin-700.woff2') format('woff2'),
+                /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+                url('webfonts/cairo-v28-latin-700.ttf') format('truetype');
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Start Header -->
+    <header id="header">
+        <div class="container">
+            <a href="#" class="logo">Elzero</a>
+
+            <ul class="main-nav">
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#features">Features</a></li>
+                <li>
+                    <a href="#">Other Links</a>
+                    <!-- Start Megamenu -->
+                    <div class="mega-menu">
+                        <div class="image">
+                            <img src="imgs/megamenu.png" alt="megamenu">
+                        </div>
+                        <ul class="links">
+                            <li>
+                                <a href="#testimonials"><svg width="1em" height="1em" stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 640 512"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M88.2 309.1c9.8-18.3 6.8-40.8-7.5-55.8C59.4 230.9 48 204 48 176c0-63.5 63.8-128 160-128s160 64.5 160 128s-63.8 128-160 128c-13.1 0-25.8-1.3-37.8-3.6c-10.4-2-21.2-.6-30.7 4.2c-4.1 2.1-8.3 4.1-12.6 6c-16 7.2-32.9 13.5-49.9 18c2.8-4.6 5.4-9.1 7.9-13.6c1.1-1.9 2.2-3.9 3.2-5.9zM0 176c0 41.8 17.2 80.1 45.9 110.3c-.9 1.7-1.9 3.5-2.8 5.1c-10.3 18.4-22.3 36.5-36.6 52.1c-6.6 7-8.3 17.2-4.6 25.9C5.8 378.3 14.4 384 24 384c43 0 86.5-13.3 122.7-29.7c4.8-2.2 9.6-4.5 14.2-6.8c15.1 3 30.9 4.5 47.1 4.5c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176zM432 480c16.2 0 31.9-1.6 47.1-4.5c4.6 2.3 9.4 4.6 14.2 6.8C529.5 498.7 573 512 616 512c9.6 0 18.2-5.7 22-14.5c3.8-8.8 2-19-4.6-25.9c-14.2-15.6-26.2-33.7-36.6-52.1c-.9-1.7-1.9-3.4-2.8-5.1C622.8 384.1 640 345.8 640 304c0-94.4-87.9-171.5-198.2-175.8c4.1 15.2 6.2 31.2 6.2 47.8l0 .6c87.2 6.7 144 67.5 144 127.4c0 28-11.4 54.9-32.7 77.2c-14.3 15-17.3 37.6-7.5 55.8c1.1 2 2.2 4 3.2 5.9c2.5 4.5 5.2 9 7.9 13.6c-17-4.5-33.9-10.7-49.9-18c-4.3-1.9-8.5-3.9-12.6-6c-9.5-4.8-20.3-6.2-30.7-4.2c-12.1 2.4-24.7 3.6-37.8 3.6c-61.7 0-110-26.5-136.8-62.3c-16 5.4-32.8 9.4-50 11.8C279 439.8 350 480 432 480z">
+                                        </path>
+                                    </svg>Testimonials</a>
+                            </li>
+                            <li>
+                                <a href="#team"><svg width="1em" height="1em" stroke="currentColor" fill="currentColor"
+                                        stroke-width="0" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z">
+                                        </path>
+                                    </svg>Team Members</a>
+                            </li>
+                            <li>
+                                <a href="#services"><svg width="1em" height="1em" stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M128 148v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12zm140 12h40c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12zm-128 96h40c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12zm128 0h40c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12zm-76 84v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm76 12h40c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12zm180 124v36H0v-36c0-6.6 5.4-12 12-12h19.5V24c0-13.3 10.7-24 24-24h337c13.3 0 24 10.7 24 24v440H436c6.6 0 12 5.4 12 12zM79.5 463H192v-67c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v67h112.5V49L80 48l-.5 415z">
+                                        </path>
+                                    </svg>Services</a>
+                            </li>
+                            <li>
+                                <a href="#our-skills"><svg width="1em" height="1em" stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z">
+                                        </path>
+                                    </svg>Our Skills</a>
+                            </li>
+                            <li>
+                                <a href="#work-steps"><svg width="1em" height="1em" stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 384 512"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z">
+                                        </path>
+                                    </svg>How It Works</a>
+                            </li>
+                        </ul>
+                        <ul class="links">
+                            <li>
+                                <a href="#events"><svg width="1em" height="1em" stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z">
+                                        </path>
+                                    </svg>Events</a>
+                            </li>
+                            <li>
+                                <a href="#pricing"><svg width="1em" height="1em" stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z">
+                                        </path>
+                                    </svg>Pricing Plans</a>
+                            </li>
+                            <li>
+                                <a href="#video"><svg width="1em" height="1em" stroke="currentColor" fill="currentColor"
+                                        stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c7.6-4.2 16.8-4.1 24.3 .5l144 88c7.1 4.4 11.5 12.1 11.5 20.5s-4.4 16.1-11.5 20.5l-144 88c-7.4 4.5-16.7 4.7-24.3 .5s-12.3-12.2-12.3-20.9V168c0-8.7 4.7-16.7 12.3-20.9z">
+                                        </path>
+                                    </svg>Top Videos</a>
+                            </li>
+                            <li>
+                                <a href="#stats"><svg width="1em" height="1em" stroke="currentColor" fill="currentColor"
+                                        stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M332.8 320h38.4c6.4 0 12.8-6.4 12.8-12.8V172.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v134.4c0 6.4 6.4 12.8 12.8 12.8zm96 0h38.4c6.4 0 12.8-6.4 12.8-12.8V76.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v230.4c0 6.4 6.4 12.8 12.8 12.8zm-288 0h38.4c6.4 0 12.8-6.4 12.8-12.8v-70.4c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v70.4c0 6.4 6.4 12.8 12.8 12.8zm96 0h38.4c6.4 0 12.8-6.4 12.8-12.8V108.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v198.4c0 6.4 6.4 12.8 12.8 12.8zM496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z">
+                                        </path>
+                                    </svg>Stats</a>
+                            </li>
+                            <li>
+                                <a href="#discount"><svg width="1em" height="1em" stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M112 224c61.9 0 112-50.1 112-112S173.9 0 112 0 0 50.1 0 112s50.1 112 112 112zm0-160c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48 21.5-48 48-48zm224 224c-61.9 0-112 50.1-112 112s50.1 112 112 112 112-50.1 112-112-50.1-112-112-112zm0 160c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zM392.3.2l31.6-.1c19.4-.1 30.9 21.8 19.7 37.8L77.4 501.6a23.95 23.95 0 0 1-19.6 10.2l-33.4.1c-19.5 0-30.9-21.9-19.7-37.8l368-463.7C377.2 4 384.5.2 392.3.2z">
+                                        </path>
+                                    </svg>Request A Discount</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Megamenu -->
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Main -->
+    <main>
+        <!-- Start Hero -->
+        <header id="hero">
+            <div class="container">
+                <div class="text">
+
+                    <h1>Welcome, To Elzero World</h1>
+                    <p class="txt">Here Iam gonna share everything about my life. Books Iam reading, Games Iam Playing,
+                        Stories and Events</p>
+                </div>
+                <div class="image">
+                    <img src="imgs/landing-image.png" alt="">
+                </div>
+            </div>
+            <a class="txt-accent" href="#articles"><svg width="1em" height="1em" stroke="currentColor"
+                    fill="currentColor" stroke-width="0" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M143 256.3L7 120.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0L313 86.3c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.4 9.5-24.6 9.5-34 .1zm34 192l136-136c9.4-9.4 9.4-24.6 0-33.9l-22.6-22.6c-9.4-9.4-24.6-9.4-33.9 0L160 352.1l-96.4-96.4c-9.4-9.4-24.6-9.4-33.9 0L7 278.3c-9.4 9.4-9.4 24.6 0 33.9l136 136c9.4 9.5 24.6 9.5 34 .1z">
+                    </path>
+                </svg></a>
+        </header>
+        <!-- End Hero -->
+
+        <!-- Start Articles -->
+        <section id="articles">
+            <h2 class="main-title">Articles</h2>
+            <div class="container">
+                <div class="box">
+                    <header>
+                        <img src="imgs/cat-01.jpg" alt="cat-01">
+                    </header>
+                    <main class="text">
+                        <h3>Test Title</h3>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
+                    </main>
+                    <footer class="txt-accent">
+                        <a class="txt-accent" href="#articles">Read More</a><svg width="1em" height="1em"
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
+                            </path>
+                        </svg>
+                    </footer>
+                </div>
+                <div class="box">
+                    <header>
+                        <img src="imgs/cat-02.jpg" alt="cat-02">
+                    </header>
+                    <main class="text">
+                        <h3>Test Title</h3>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
+                    </main>
+                    <footer class="txt-accent">
+                        <a class="txt-accent" href="#articles">Read More</a><svg width="1em" height="1em"
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
+                            </path>
+                        </svg>
+                    </footer>
+                </div>
+                <div class="box">
+                    <header>
+                        <img src="imgs/cat-03.jpg" alt="cat-03">
+                    </header>
+                    <main class="text">
+                        <h3>Test Title</h3>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
+                    </main>
+                    <footer class="txt-accent">
+                        <a class="txt-accent" href="#articles">Read More</a><svg width="1em" height="1em"
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
+                            </path>
+                        </svg>
+                    </footer>
+                </div>
+                <div class="box">
+                    <header>
+                        <img src="imgs/cat-04.jpg" alt="cat-04">
+                    </header>
+                    <main class="text">
+                        <h3>Test Title</h3>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
+                    </main>
+                    <footer class="txt-accent">
+                        <a class="txt-accent" href="#articles">Read More</a><svg width="1em" height="1em"
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
+                            </path>
+                        </svg>
+                    </footer>
+                </div>
+                <div class="box">
+                    <header>
+                        <img src="imgs/cat-05.jpg" alt="cat-05">
+                    </header>
+                    <main class="text">
+                        <h3>Test Title</h3>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
+                    </main>
+                    <footer class="txt-accent">
+                        <a class="txt-accent" href="#articles">Read More</a><svg width="1em" height="1em"
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
+                            </path>
+                        </svg>
+                    </footer>
+                </div>
+                <div class="box">
+                    <header>
+                        <img src="imgs/cat-06.jpg" alt="cat-06">
+                    </header>
+                    <main class="text">
+                        <h3>Test Title</h3>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
+                    </main>
+                    <footer class="txt-accent">
+                        <a class="txt-accent" href="#articles">Read More</a><svg width="1em" height="1em"
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
+                            </path>
+                        </svg>
+                    </footer>
+                </div>
+                <div class="box">
+                    <header>
+                        <img src="imgs/cat-07.jpg" alt="cat-07">
+                    </header>
+                    <main class="text">
+                        <h3>Test Title</h3>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
+                    </main>
+                    <footer class="txt-accent">
+                        <a class="txt-accent" href="#articles">Read More</a><svg width="1em" height="1em"
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
+                            </path>
+                        </svg>
+                    </footer>
+                </div>
+                <div class="box">
+                    <header>
+                        <img src="imgs/cat-08.jpg" alt="cat-08">
+                    </header>
+                    <main class="text">
+                        <h3>Test Title</h3>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
+                    </main>
+                    <footer class="txt-accent">
+                        <a class="txt-accent" href="#articles">Read More</a><svg width="1em" height="1em"
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
+                            </path>
+                        </svg>
+                    </footer>
+                </div>
+            </div>
+        </section>
+        <!-- End Articles -->
+
+        <div class="spikes"></div>
+
+        <!-- Start Gallery -->
+        <section id="gallery">
+            <h2 class="main-title">Gallery</h2>
+            <div class="container">
+                <div class="box">
+                    <div>
+                        <img src="imgs/gallery-01.png" alt="gallery-01">
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div>
+                        <img src="imgs/gallery-02.png" alt="gallery-02">
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div>
+                        <img src="imgs/gallery-03.jpg" alt="gallery-03">
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div>
+                        <img src="imgs/gallery-04.png" alt="gallery-04">
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div>
+                        <img src="imgs/gallery-05.jpg" alt="gallery-05">
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div>
+                        <img src="imgs/gallery-06.png" alt="gallery-06">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Gallery -->
+
+        <div class="spikes inv"></div>
+
+        <!-- Start Features -->
+        <section id="features">
+            <h2 class="main-title">Features</h2>
+            <div class="container">
+                <div class="box" style="--local-color: 244 64 54;">
+                    <div class="hero">
+                        <img src="imgs/features-01.jpg" alt="features-01">
+                    </div>
+                    <h3>Quality</h3>
+                    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam
+                        eligendi minima</p>
+                    <button>More</button>
+                </div>
+                <div class="box" style="--local-color: 0 150 136;">
+                    <div class="hero">
+                        <img src="imgs/features-02.jpg" alt="features-02">
+                    </div>
+                    <h3>Time</h3>
+                    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam
+                        eligendi minima</p>
+                    <button>More</button>
+                </div>
+                <div class="box" style="--local-color: 3 169 244;">
+                    <div class="hero">
+                        <img src="imgs/features-03.jpg" alt="features-03">
+                    </div>
+                    <h3>Passion</h3>
+                    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam
+                        eligendi minima</p>
+                    <button>More</button>
+                </div>
+            </div>
+        </section>
+        <!-- End Features -->
+
+        <div class="spikes"></div>
+
+        <!-- Start Testimonials -->
+        <section id="testimonials">
+            <h2 class="main-title">Testimonials</h2>
+            <div class="container">
+
+                <div class="box">
+                    <img class="avatar" src="imgs/avatar-01.png" alt="avatar-01">
+                    <main>
+                        <h3>Mohamed Farag</h3>
+                        <span class="title">Full Stack Developer</span>
+                        <div class="rate">
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg> <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg> <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg> <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg> <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis
+                            voluptatum, amet est natus quaerat ducimus</p>
+                    </main>
+                </div>
+
+                <div class="box">
+                    <img class="avatar" src="imgs/avatar-02.png" alt="avatar-02">
+                    <main>
+                        <h3>Mohamed Farag</h3>
+                        <span class="title">Full Stack Developer</span>
+                        <div class="rate">
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis
+                            voluptatum, amet est natus quaerat ducimus</p>
+                    </main>
+                </div>
+
+                <div class="box">
+                    <img class="avatar" src="imgs/avatar-03.png" alt="avatar-03">
+                    <main>
+                        <h3>Mohamed Farag</h3>
+                        <span class="title">Full Stack Developer</span>
+                        <div class="rate">
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.6 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis
+                            voluptatum, amet est natus quaerat ducimus</p>
+                    </main>
+                </div>
+
+                <div class="box">
+                    <img class="avatar" src="imgs/avatar-04.png" alt="avatar-04">
+                    <main>
+                        <h3>Mohamed Farag</h3>
+                        <span class="title">Full Stack Developer</span>
+                        <div class="rate">
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.6 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis
+                            voluptatum, amet est natus quaerat ducimus</p>
+                    </main>
+                </div>
+
+                <div class="box">
+                    <img class="avatar" src="imgs/avatar-05.png" alt="avatar-05">
+                    <main>
+                        <h3>Mohamed Farag</h3>
+                        <span class="title">Full Stack Developer</span>
+                        <div class="rate">
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis
+                            voluptatum, amet est natus quaerat ducimus</p>
+                    </main>
+                </div>
+
+                <div class="box">
+                    <img class="avatar" src="imgs/avatar-06.png" alt="avatar-06">
+                    <main>
+                        <h3>Mohamed Farag</h3>
+                        <span class="title">Full Stack Developer</span>
+                        <div class="rate">
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg class="filled" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg>
+                            <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.6 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis
+                            voluptatum, amet est natus quaerat ducimus</p>
+                    </main>
+                </div>
+            </div>
+        </section>
+        <!-- End Testimonials -->
+
+        <div class="spikes inv"></div>
+
+        <!-- Start Team -->
+        <section id="team">
+            <h2 class="main-title">Team Members</h2>
+            <div class="container">
+
+                <!-- Start boxes -->
+                <div class="box">
+                    <div class="details">
+                        <div class="socials">
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="imgs/team-01.jpg" alt="team-01">
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="details">
+                        <div class="socials">
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="imgs/team-02.jpg" alt="team-02">
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="details">
+                        <div class="socials">
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="imgs/team-03.jpg" alt="team-03">
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="details">
+                        <div class="socials">
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="imgs/team-04.jpg" alt="team-04">
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="details">
+                        <div class="socials">
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="imgs/team-05.png" alt="team-05">
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="details">
+                        <div class="socials">
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="imgs/team-06.png" alt="team-06">
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="details">
+                        <div class="socials">
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="imgs/team-07.jpg" alt="team-07">
+                    </div>
+                    <div class="info">
+                        <h3>Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="details">
+                        <div class="socials">
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#team">
+                                <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="imgs/team-08.jpg" alt="team-08">
+                    </div>
+                    <div class="info">
+                        <h3 class="txt-accent">Name</h3>
+                        <p>Simple Short Description</p>
+                    </div>
+                </div>
+                <!-- End boxes -->
+            </div>
+        </section>
+        <!-- End Team -->
+
+        <div class="spikes"></div>
+
+        <!-- Start Services -->
+        <section id="services">
+
+            <h2 class="main-title">Services</h2>
+
+            <div class="container">
+                <!-- Start boxes -->
+                <div class="box">
+                    <div class="icon">
+                        <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                            viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c1.8 0 3.5-.2 5.3-.5c-76.3-55.1-99.8-141-103.1-200.2c-16.1-4.8-33.1-7.3-50.7-7.3H178.3zm308.8-78.3l-120 48C358 277.4 352 286.2 352 296c0 63.3 25.9 168.8 134.8 214.2c5.9 2.5 12.6 2.5 18.5 0C614.1 464.8 640 359.3 640 296c0-9.8-6-18.6-15.1-22.3l-120-48c-5.7-2.3-12.1-2.3-17.8 0zM591.4 312c-3.9 50.7-27.2 116.7-95.4 149.7V273.8L591.4 312z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <h3>Security</h3>
+
+                    <footer>
+                        <a class="txt-accent" href="#services">Details</a>
+                    </footer>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                            viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <h3>Fixing Issues</h3>
+
+                    <footer>
+                        <a class="txt-accent" href="#services">Details</a>
+                    </footer>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                            viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.94 14.86L160 448V214.92c-8.84-15.98-16.07-31.54-21.25-46.42L20.12 215.95zM288 359.67c-14.07 0-27.38-6.18-36.51-16.96-19.66-23.2-40.57-49.62-59.49-76.72v182l192 64V266c-18.92 27.09-39.82 53.52-59.49 76.72-9.13 10.77-22.44 16.95-36.51 16.95zm266.06-198.51L416 224v288l139.88-55.95A31.996 31.996 0 0 0 576 426.34V176.02c0-11.32-11.43-19.06-21.94-14.86z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <h3>Location</h3>
+
+                    <footer>
+                        <a class="txt-accent" href="#services">Details</a>
+                    </footer>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                            viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <h3>Coding</h3>
+
+                    <footer>
+                        <a class="txt-accent" href="#services">Details</a>
+                    </footer>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                            viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <h3>Painting</h3>
+
+                    <footer>
+                        <a class="txt-accent" href="#services">Details</a>
+                    </footer>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                            viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M576 240c0-23.63-12.95-44.04-32-55.12V32.01C544 23.26 537.02 0 512 0c-7.12 0-14.19 2.38-19.98 7.02l-85.03 68.03C364.28 109.19 310.66 128 256 128H64c-35.35 0-64 28.65-64 64v96c0 35.35 28.65 64 64 64h33.7c-1.39 10.48-2.18 21.14-2.18 32 0 39.77 9.26 77.35 25.56 110.94 5.19 10.69 16.52 17.06 28.4 17.06h74.28c26.05 0 41.69-29.84 25.9-50.56-16.4-21.52-26.15-48.36-26.15-77.44 0-11.11 1.62-21.79 4.41-32H256c54.66 0 108.28 18.81 150.98 52.95l85.03 68.03a32.023 32.023 0 0 0 19.98 7.02c24.92 0 32-22.78 32-32V295.13C563.05 284.04 576 263.63 576 240zm-96 141.42l-33.05-26.44C392.95 311.78 325.12 288 256 288v-96c69.12 0 136.95-23.78 190.95-66.98L480 98.58v282.84z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <h3>Marketing</h3>
+
+                    <footer>
+                        <a class="txt-accent" href="#services">Details</a>
+                    </footer>
+                </div>
+                <!-- End boxes -->
+            </div>
+        </section>
+        <!-- End Services -->
+
+        <div class="spikes inv"></div>
+
+        <!-- Start Skills -->
+        <section id="our-skills">
+
+            <h2 class="main-title">Our Skills</h2>
+
+            <div class="container">
+
+                <div class="image">
+                    <img src="imgs/skills.png" alt="skills">
+                </div>
+
+                <div class="skills">
+                    <div class="skill">
+                        <h3>HTML</h3>
+                        <div class="progress-bar" data-progress="80" style="--progress: 80%;"></div>
+                    </div>
+                    <div class="skill">
+                        <h3>CSS</h3>
+                        <div class="progress-bar" data-progress="85" style="--progress: 85%;"></div>
+                    </div>
+                    <div class="skill">
+                        <h3>JavaScript</h3>
+                        <div class="progress-bar" data-progress="70" style="--progress: 70%;"></div>
+                    </div>
+                    <div class="skill">
+                        <h3>Python</h3>
+                        <div class="progress-bar" data-progress="60" style="--progress: 60%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Skills -->
+
+        <div class="spikes"></div>
+
+        <!-- Start Work-Steps -->
+        <section id="work-steps">
+            <h2 class="main-title">How It Works ?</h2>
+
+            <div class="container">
+
+                <img src="imgs/work-steps.png" alt="work-steps">
+
+                <div class="steps">
+                    <div class="box">
+                        <img src="imgs/work-steps-1.png" alt="work-steps-1">
+                        <div class="content">
+                            <h3>Business Analysis</h3>
+                            <p class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt
+                                obcaecati quisquam quis laborum recusandae debitis vel</p>
+
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="imgs/work-steps-2.png" alt="work-steps-2">
+                        <div class="content">
+                            <h3>Architecture</h3>
+                            <p class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt
+                                obcaecati quisquam quis laborum recusandae debitis vel</p>
+
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="imgs/work-steps-3.png" alt="work-steps-3">
+                        <div class="content">
+                            <h3>Developement</h3>
+                            <p class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt
+                                obcaecati quisquam quis laborum recusandae debitis vel</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Work-Steps -->
+
+        <div class="spikes inv"></div>
+
+        <!-- Start Events -->
+        <section id="events" class="dotted-bg">
+            <h2 class="main-title">Latest Events</h2>
+
+            <div class="container">
+
+                <div class="event">
+                    <div class="image">
+                        <img src="imgs/events.png" alt="event">
+                    </div>
+
+                    <div class="content">
+                        <div class="date">
+                            <div>
+                                <span>3</span>
+                                <span>Days</span>
+                            </div>
+                            <div>
+                                <span>4</span>
+                                <span>Hours</span>
+                            </div>
+                            <div>
+                                <span>34</span>
+                                <span>Minutes</span>
+                            </div>
+                            <div>
+                                <span>14</span>
+                                <span>Seconds</span>
+                            </div>
+                        </div>
+
+                        <div class="text">
+                            <h3>Tech Masters Event 2024</h3>
+                            <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero tenetur
+                                doloremque iusto ut adipisci quam ratione aliquam excepturi nulla in harum, veritatis
+                                porro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form action id="subscribe-form">
+                    <input required type="email" name="subscribe-email" id="subscribe-email"
+                        placeholder="Enter Your Email">
+
+                    <input type="submit" value="Subscribe">
+                </form>
+
+            </div>
+        </section>
+        <!-- End Events -->
+
+        <div class="spikes"></div>
+
+        <!-- Start Pricing -->
+        <section id="pricing" class="dotted-bg">
+            <h2 class="main-title">Pricing Plans</h2>
+
+            <div class="container">
+                <!-- Start boxes -->
+                <div class="box">
+
+                    <header>
+                        <h3>Basic</h3>
+                        <img src="imgs/hosting-basic.png" alt="hosting-basic">
+                        <span class="price">$15</span>
+                        <span class="txt">Per Month</span>
+                    </header>
+
+                    <main>
+
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            10GB HDD Space
+                        </section>
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            5 Email Addresses
+                        </section>
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            2 Subdomains
+                        </section>
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            4 Databases
+                        </section>
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            Basic Support
+                        </section>
+
+                    </main>
+
+                    <a href="#pricing">Choose Plan</a>
+                </div>
+                <div class="box popular">
+                    <p class="badge">Most Popular</p>
+                    <header>
+                        <h3>Advanced</h3>
+                        <img src="imgs/hosting-advanced.png" alt="hosting-advanced">
+                        <span class="price">$25</span>
+                        <span class="txt">Per Month</span>
+                    </header>
+
+                    <main>
+
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            20GB HDD Space
+                        </section>
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            10 Email Addresses
+                        </section>
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            5 Subdomains
+                        </section>
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            8 Databases
+                        </section>
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            Advanced Support
+                        </section>
+
+                    </main>
+
+                    <a href="#pricing">Choose Plan</a>
+                </div>
+                <div class="box">
+
+                    <header>
+                        <h3>Professional</h3>
+                        <img src="imgs/hosting-professional.png" alt="hosting-professional">
+                        <span class="price">$45</span>
+                        <span class="txt">Per Month</span>
+                    </header>
+
+                    <main>
+
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            50GB HDD Space
+                        </section>
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            20 Email Addresses
+                        </section>
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            10 Subdomains
+                        </section>
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            20 Databases
+                        </section>
+                        <section>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                </path>
+                            </svg>
+                            Professional Support
+                        </section>
+
+                    </main>
+
+                    <a href="#pricing">Choose Plan</a>
+                </div>
+                <!-- End boxes -->
+            </div>
+        </section>
+        <!-- End Pricing -->
+
+        <div class="spikes inv"></div>
+
+        <!-- Start Videos -->
+        <section id="videos">
+
+            <h2 class="main-title">Top Videos</h2>
+
+            <div class="container">
+                <div class="holder">
+                    <div class="list">
+                        <header>
+                            <h3>Top Videos</h3>
+                            <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M504.971 359.029c9.373 9.373 9.373 24.569 0 33.941l-80 79.984c-15.01 15.01-40.971 4.49-40.971-16.971V416h-58.785a12.004 12.004 0 0 1-8.773-3.812l-70.556-75.596 53.333-57.143L352 336h32v-39.981c0-21.438 25.943-31.998 40.971-16.971l80 79.981zM12 176h84l52.781 56.551 53.333-57.143-70.556-75.596A11.999 11.999 0 0 0 122.785 96H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12zm372 0v39.984c0 21.46 25.961 31.98 40.971 16.971l80-79.984c9.373-9.373 9.373-24.569 0-33.941l-80-79.981C409.943 24.021 384 34.582 384 56.019V96h-58.785a12.004 12.004 0 0 0-8.773 3.812L96 336H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h110.785c3.326 0 6.503-1.381 8.773-3.812L352 176h32z">
+                                </path>
+                            </svg>
+                        </header>
+                        <ul>
+                            <li>
+                                How To Create Sub Domain
+                                <span class="txt">05:18</span>
+                            </li>
+                            <li>
+                                Playing With The DNS
+                                <span class="txt">03:18</span>
+                            </li>
+                            <li>
+                                Everything About The Virtual Hosts
+                                <span class="txt">05:25</span>
+                            </li>
+                            <li>
+                                How To Monitor Your Website
+                                <span class="txt">04:16</span>
+                            </li>
+                            <li>
+                                Uncharted Beating The Last Boss
+                                <span class="txt">07:48</span>
+                            </li>
+                            <li>
+                                Ys Oath In Felghana Overview
+                                <span class="txt">03:12</span>
+                            </li>
+                            <li>
+                                Ys Series All Games Ending
+                                <span class="txt">08:10</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="preview">
+                        <img src="imgs/video-preview.jpg" alt="video-preview">
+                        <p>Everything About The Virtual Hosts</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Videos -->
+
+        <!-- Start Stats -->
+        <section id="stats">
+            <h2 class="main-title">Our Awesome Stats</h2>
+            <div class="container">
+                <div class="box">
+                    <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z">
+                        </path>
+                    </svg>
+                    <span class="number">150</span>
+                    <span class="txt-accent">Clients</span>
+                </div>
+                <div class="box">
+                    <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z">
+                        </path>
+                    </svg>
+                    <span class="number">135</span>
+                    <span class="txt-accent">Projects</span>
+                </div>
+                <div class="box">
+                    <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm160 215.5v6.93c0 5.87-3.32 11.24-8.57 13.86l-15.39 7.7a15.485 15.485 0 0 1-15.53-.97l-18.21-12.14a15.52 15.52 0 0 0-13.5-1.81l-2.65.88c-9.7 3.23-13.66 14.79-7.99 23.3l13.24 19.86c2.87 4.31 7.71 6.9 12.89 6.9h8.21c8.56 0 15.5 6.94 15.5 15.5v11.34c0 3.35-1.09 6.62-3.1 9.3l-18.74 24.98c-1.42 1.9-2.39 4.1-2.83 6.43l-4.3 22.83c-.62 3.29-2.29 6.29-4.76 8.56a159.608 159.608 0 0 0-25 29.16l-13.03 19.55a27.756 27.756 0 0 1-23.09 12.36c-10.51 0-20.12-5.94-24.82-15.34a78.902 78.902 0 0 1-8.33-35.29V367.5c0-8.56-6.94-15.5-15.5-15.5h-25.88c-14.49 0-28.38-5.76-38.63-16a54.659 54.659 0 0 1-16-38.63v-14.06c0-17.19 8.1-33.38 21.85-43.7l27.58-20.69a54.663 54.663 0 0 1 32.78-10.93h.89c8.48 0 16.85 1.97 24.43 5.77l14.72 7.36c3.68 1.84 7.93 2.14 11.83.84l47.31-15.77c6.33-2.11 10.6-8.03 10.6-14.7 0-8.56-6.94-15.5-15.5-15.5h-10.09c-4.11 0-8.05-1.63-10.96-4.54l-6.92-6.92a15.493 15.493 0 0 0-10.96-4.54H199.5c-8.56 0-15.5-6.94-15.5-15.5v-4.4c0-7.11 4.84-13.31 11.74-15.04l14.45-3.61c3.74-.94 7-3.23 9.14-6.44l8.08-12.11c2.87-4.31 7.71-6.9 12.89-6.9h24.21c8.56 0 15.5-6.94 15.5-15.5v-21.7C359.23 71.63 422.86 131.02 441.93 208H423.5c-8.56 0-15.5 6.94-15.5 15.5z">
+                        </path>
+                    </svg>
+                    <span class="number">50</span>
+                    <span class="txt-accent">Countries</span>
+                </div>
+                <div class="box">
+                    <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M320 144c-53.02 0-96 50.14-96 112 0 61.85 42.98 112 96 112 53 0 96-50.13 96-112 0-61.86-42.98-112-96-112zm40 168c0 4.42-3.58 8-8 8h-64c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h16v-55.44l-.47.31a7.992 7.992 0 0 1-11.09-2.22l-8.88-13.31a7.992 7.992 0 0 1 2.22-11.09l15.33-10.22a23.99 23.99 0 0 1 13.31-4.03H328c4.42 0 8 3.58 8 8v88h16c4.42 0 8 3.58 8 8v16zM608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zm-16 272c-35.35 0-64 28.65-64 64H112c0-35.35-28.65-64-64-64V176c35.35 0 64-28.65 64-64h416c0 35.35 28.65 64 64 64v160z">
+                        </path>
+                    </svg>
+                    <span class="number">500</span>
+                    <span class="txt-accent">Money</span>
+                </div>
+            </div>
+        </section>
+        <!-- End Stats -->
+
+        <!-- Start Discount -->
+        <section id="discount">
+            <div class="img">
+                <!-- <div class="content"> -->
+                <h3>We Have A Discount</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et quas fugit sed necessitatibus nisi
+                    praesentium illum fugiat quod earum minima rem officia dolorum magni repudiandae ipsam, in quibusdam
+                    ut. Corporis!</p>
+                <img src="imgs/discount.png" alt="discount">
+                <!-- </div> -->
+            </div>
+
+            <!-- put the form on the same level as the h3 to give it the h3 width -->
+            <div class="form">
+                <div class="content">
+                    <h3>Request A Discount</h3>
+                    <form action id="discount-form">
+                        <input type="text" placeholder="Your Name">
+                        <input type="email" placeholder="Your Email">
+                        <input type="tel" placeholder="Your Phone">
+                        <textarea placeholder="Tell Us About Your Needs"></textarea>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- End Discount -->
+    </main>
+    <!-- End Main -->
+
+    <!-- Start Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="box">
+                <h3>Elzero</h3>
+                <ul class="social">
+                    <li>
+                        <a href="#" style="--local-color: #1877f2;" class="facebook">
+                            <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="--local-color: #1da1f2;" class="twitter">
+                            <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" style="--local-color: #ff0000;" class="youtube">
+                            <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus nulla rem, dignissimos iste
+                    aspernatur
+                </p>
+            </div>
+            <div class="box">
+                <ul class="links">
+                    <li><a href="#"> <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z">
+                                </path>
+                            </svg> Important Link 1</a></li>
+                    <li><a href="#"> <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z">
+                                </path>
+                            </svg> Important Link 2</a></li>
+                    <li><a href="#"> <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z">
+                                </path>
+                            </svg> Important Link 3</a></li>
+                    <li><a href="#"> <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z">
+                                </path>
+                            </svg> Important Link 4</a></li>
+                    <li><a href="#"> <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z">
+                                </path>
+                            </svg> Important Link 5</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <div class="line">
+                    <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
+                        </path>
+                    </svg>
+                    <div class="info">Egypt, Giza, Inside The Sphinx, Room Number 220</div>
+                </div>
+                <div class="line">
+                    <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                        </path>
+                    </svg>
+                    <div class="info">Business Hours: From 10:00 To 18:00</div>
+                </div>
+                <div class="line">
+                    <svg width="1em" height="1em" stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M97.333 506.966c-129.874-129.874-129.681-340.252 0-469.933 5.698-5.698 14.527-6.632 21.263-2.422l64.817 40.513a17.187 17.187 0 0 1 6.849 20.958l-32.408 81.021a17.188 17.188 0 0 1-17.669 10.719l-55.81-5.58c-21.051 58.261-20.612 122.471 0 179.515l55.811-5.581a17.188 17.188 0 0 1 17.669 10.719l32.408 81.022a17.188 17.188 0 0 1-6.849 20.958l-64.817 40.513a17.19 17.19 0 0 1-21.264-2.422zM247.126 95.473c11.832 20.047 11.832 45.008 0 65.055-3.95 6.693-13.108 7.959-18.718 2.581l-5.975-5.726c-3.911-3.748-4.793-9.622-2.261-14.41a32.063 32.063 0 0 0 0-29.945c-2.533-4.788-1.65-10.662 2.261-14.41l5.975-5.726c5.61-5.378 14.768-4.112 18.718 2.581zm91.787-91.187c60.14 71.604 60.092 175.882 0 247.428-4.474 5.327-12.53 5.746-17.552.933l-5.798-5.557c-4.56-4.371-4.977-11.529-.93-16.379 49.687-59.538 49.646-145.933 0-205.422-4.047-4.85-3.631-12.008.93-16.379l5.798-5.557c5.022-4.813 13.078-4.394 17.552.933zm-45.972 44.941c36.05 46.322 36.108 111.149 0 157.546-4.39 5.641-12.697 6.251-17.856 1.304l-5.818-5.579c-4.4-4.219-4.998-11.095-1.285-15.931 26.536-34.564 26.534-82.572 0-117.134-3.713-4.836-3.115-11.711 1.285-15.931l5.818-5.579c5.159-4.947 13.466-4.337 17.856 1.304z">
+                        </path>
+                    </svg>
+                    <div class="info">
+                        <span>+20123456789</span>
+                        <span>+20198765432</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box footer-gallery">
+                <img src="imgs/gallery-01.png" alt="gallery-01">
+                <img src="imgs/gallery-02.png" alt="gallery-02">
+                <img src="imgs/gallery-03.jpg" alt="gallery-03">
+                <img src="imgs/gallery-04.png" alt="gallery-04">
+                <img src="imgs/gallery-05.jpg" alt="gallery-05">
+                <img src="imgs/gallery-06.png" alt="gallery-06">
+            </div>
+        </div>
+        <p>Made With &lt;3 By Elzero</p>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="extract-classes.js"></script>
+</body>
+
+</html>
