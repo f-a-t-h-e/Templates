@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        #spritesheet {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-outer-container">
+        <nav class="main-nav">
+            <h2>Elzero</h2>
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">
+                        <svg>
+                            <use xlink:href="#icon-chart-bar"></use>
+                        </svg>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="active" href="settings.html">
+                        <svg>
+                            <use xlink:href="#icon-gear"></use>
+                        </svg>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <svg>
+                            <use xlink:href="#icon-user"></use>
+                        </svg>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html">
+                        <svg>
+                            <use xlink:href="#icon-diagram-project"></use>
+                        </svg>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html">
+                        <svg>
+                            <use xlink:href="#icon-graduation-cap"></use>
+                        </svg>
+                        <span>Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="friends.html">
+                        <svg>
+                            <use xlink:href="#icon-circle-user"></use>
+                        </svg>
+                        <span>Friends</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="files.html">
+                        <svg>
+                            <use xlink:href="#icon-file"></use>
+                        </svg>
+                        <span>Files</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="plans.html">
+                        <svg>
+                            <use xlink:href="#icon-credit-card"></use>
+                        </svg>
+                        <span>Plans</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="body-container">
+            <header>
+                <div class="search">
+                    <svg>
+                        <use xlink:href="#icon-magnifying-glass"></use>
+                    </svg>
+                    <input placeholder="Type A Keyword" type="text">
+                </div>
+                <div class="profile">
+                    <div class="notifications-container">
+                        <svg>
+                            <use xlink:href="#icon-bell"></use>
+                        </svg>
+                        <div class="notifications">
+                            <div class="notification">Message</div>
+                            <div class="notification">Message</div>
+                            <div class="notification">Message</div>
+                            <div class="notification">Message</div>
+                            <span class="notifications-badge"></span>
+                        </div>
+                    </div>
+                    <div class="avatar sm">
+                        <img src="imgs/avatar.png" alt="avatar">
+                    </div>
+                </div>
+            </header>
+            <h1>Settings</h1>
+            <main>
+                <!-- Start Boards Container -->
+                <div class="boards-container">
+
+                    <!-- Start -->
+                    <!-- End -->
+
+                    <!-- Start Site Control -->
+                    <div class="board site-control">
+                        <header>
+                            <hgroup>
+                                <h2>Site Control</h2>
+                                <span>Control The Website If There Is Maintenance</span>
+                            </hgroup>
+                        </header>
+
+                        <!-- Start Content -->
+                        <main>
+                            <input hidden type="radio" class="toggle-disabled-checkbox" id="open-close-website-toggle"
+                                name="open-close-website-toggle">
+                            <div class="flex justify-between m-b-15 align-center">
+
+                                <hgroup>
+                                    <h3>Website Control</h3>
+                                    <p class="text-13 c-2 m-t-5">Open/Close Website And Type The Reason</p>
+                                </hgroup>
+
+                                <div class="relative">
+                                    <label for="open-close-website-toggle">
+                                        <div class="toggle-switch">
+                                            <span>
+
+                                            </span>
+                                        </div>
+                                    </label>
+                                    <label>
+                                        <input type="radio" class="toggle-checkbox" name="open-close-website-toggle">
+                                        <div class="toggle-switch">
+                                            <span>
+                                                <svg>
+                                                    <use xlink:href="#icon-solid-circle-check" class="checked-svg">
+                                                    </use>
+                                                    <use xlink:href="#icon-solid-circle-xmark" class="un-checked-svg">
+                                                    </use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <textarea class="toggle-disabled-target textarea-md r-6 b-light"
+                                placeholder="Close Message Content"></textarea>
+
+                        </main>
+                        <!-- End Content -->
+                    </div>
+                    <!-- End Site Control -->
+
+                    <!-- Start General Info -->
+                    <div class="board site-control">
+                        <header>
+                            <hgroup>
+                                <h2>General Info</h2>
+                                <span>General Information About Your Account</span>
+                            </hgroup>
+                        </header>
+
+                        <!-- Start Content -->
+                        <main>
+                            <label class="m-b-10 block">
+                                <span class="c-2 m-b-5 block">First Name</span>
+                                <input type="text" class="b-light w-full r-6 p-10" placeholder="First Name">
+                            </label>
+                            <label class="m-b-10 block">
+                                <span class="c-2 m-b-5 block">Last Name</span>
+                                <input type="text" class="b-light w-full r-6 p-10" placeholder="Last Name">
+                            </label>
+                            <span class="c-2 m-b-5 block">Email</span>
+                            <div class="flex align-center">
+
+                                <label>
+                                    <input disabled type="text" class="b-light w-full r-6 p-10 bg-"
+                                        placeholder="First Name">
+                                </label>
+                                <a href="#" class="c-blue m-in-10">Change</a>
+                            </div>
+                        </main>
+                        <!-- End Content -->
+                    </div>
+                    <!-- End General Info -->
+
+                    <!-- Start Security Info -->
+                    <div class="board site-control">
+                        <header>
+                            <hgroup>
+                                <h2>Security Info</h2>
+                                <span>Security Information About Your Account</span>
+                            </hgroup>
+                        </header>
+
+                        <!-- Start Content -->
+                        <main>
+                            <div class="flex align-center justify-between b-b-light p-block-10">
+                                <div>
+                                    <p>Password</p>
+                                    <p class="m-t-5 c-2 text-13 m-b-10">Last Change On <time
+                                            datetime="2021-10-25">25/10/2021</time></p>
+                                </div>
+                                <a class="btn block p-in-6 p-block-3 r-6 m-in-5 text-15" href="#">Change</a>
+                            </div>
+                            <div class="flex align-center justify-between b-b-light p-block-10">
+                                <div>
+                                    <p>Two-Factor Authentication</p>
+                                    <p class="m-t-5 c-2 text-13 m-b-10">Enable/Disable The Feature</p>
+                                </div>
+                                <label>
+                                    <input type="checkbox" class="toggle-checkbox" checked>
+                                    <div class="toggle-switch">
+                                        <span>
+                                            <svg>
+                                                <use xlink:href="#icon-solid-circle-check" class="checked-svg">
+                                                </use>
+                                                <use xlink:href="#icon-solid-circle-xmark" class="un-checked-svg">
+                                                </use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="flex align-center justify-between b-b-light p-block-10">
+                                <div>
+                                    <p>Devices</p>
+                                    <p class="m-t-5 c-2 text-13 m-b-10">Check The Login Devices List</p>
+                                </div>
+                                <a class="badge text-15 block p-in-6 p-block-3 m-in-5" href="#">Devices</a>
+                            </div>
+
+                        </main>
+                        <!-- End Content -->
+                    </div>
+                    <!-- End Security Info -->
+
+                    <!-- Start Social Info -->
+                    <div class="board site-control">
+                        <header>
+                            <hgroup>
+                                <h2>Social Info</h2>
+                                <span>Social Media Information</span>
+                            </hgroup>
+                        </header>
+
+                        <!-- Start Content -->
+                        <main>
+                            <label class="with-active-icon flex bg-secondary b-light r-6 m-b-10">
+                                <span class="icon flex justify-center align-center p-10 text-16 b-r-light">
+                                    <svg>
+                                        <use xlink:href="#icon-twitter"></use>
+                                    </svg>
+                                </span>
+                                <input class="bg-transparent p-10" type="text" placeholder="Twitter Username">
+                            </label>
+                            <label class="with-active-icon flex bg-secondary b-light r-6 m-b-10">
+                                <span class="icon flex justify-center align-center p-10 text-16 b-r-light">
+                                    <svg>
+                                        <use xlink:href="#icon-facebook-f"></use>
+                                    </svg>
+                                </span>
+                                <input class="bg-transparent p-10" type="text" placeholder="Facebook Username">
+                            </label>
+                            <label class="with-active-icon flex bg-secondary b-light r-6 m-b-10">
+                                <span class="icon flex justify-center align-center p-10 text-16 b-r-light">
+                                    <svg>
+                                        <use xlink:href="#icon-linkedin"></use>
+                                    </svg>
+                                </span>
+                                <input class="bg-transparent p-10" type="text" placeholder="Linkedin Username">
+                            </label>
+                            <label class="with-active-icon flex bg-secondary b-light r-6">
+                                <span class="icon flex justify-center align-center p-10 text-16 b-r-light">
+                                    <svg>
+                                        <use xlink:href="#icon-youtube"></use>
+                                    </svg>
+                                </span>
+                                <input class="bg-transparent p-10" type="text" placeholder="Youtube Username">
+                            </label>
+                        </main>
+                        <!-- End Content -->
+                    </div>
+                    <!-- End Social Info -->
+
+                    <!-- Start Widgets Control -->
+                    <div class="board site-control">
+                        <header>
+                            <hgroup>
+                                <h2>Widgets Control</h2>
+                                <span>Show/Hide Widgets</span>
+                            </hgroup>
+                        </header>
+                        <!-- Start Content -->
+                        <main class="flex-col g-15">
+                            <label class="checkbox-label flex pointer align-center g-10">
+                                <input type="checkbox" hidden>
+                                <span class="icon r-4">
+                                    <svg class="r-4 svg">
+                                        <use xlink:href="#icon-check"></use>
+                                    </svg>
+                                </span>
+                                <span>Quick Draft</span>
+                            </label>
+                            <label class="checkbox-label flex pointer align-center g-10">
+                                <input type="checkbox" hidden>
+                                <span class="icon r-4">
+                                    <svg class="r-4 svg">
+                                        <use xlink:href="#icon-check"></use>
+                                    </svg>
+                                </span>
+                                <span>Yearly Targets</span>
+                            </label>
+                            <label class="checkbox-label flex pointer align-center g-10">
+                                <input type="checkbox" hidden>
+                                <span class="icon r-4">
+                                    <svg class="r-4 svg">
+                                        <use xlink:href="#icon-check"></use>
+                                    </svg>
+                                </span>
+                                <span>Tickets Statistics</span>
+                            </label>
+                            <label class="checkbox-label flex pointer align-center g-10">
+                                <input type="checkbox" hidden>
+                                <span class="icon r-4">
+                                    <svg class="r-4 svg">
+                                        <use xlink:href="#icon-check"></use>
+                                    </svg>
+                                </span>
+                                <span>Latest News</span>
+                            </label>
+                            <label class="checkbox-label flex pointer align-center g-10">
+                                <input type="checkbox" hidden>
+                                <span class="icon r-4">
+                                    <svg class="r-4 svg">
+                                        <use xlink:href="#icon-check"></use>
+                                    </svg>
+                                </span>
+                                <span>Latest Tasks</span>
+                            </label>
+                            <label class="checkbox-label flex pointer align-center g-10">
+                                <input type="checkbox" hidden>
+                                <span class="icon r-4">
+                                    <svg class="r-4 svg">
+                                        <use xlink:href="#icon-check"></use>
+                                    </svg>
+                                </span>
+                                <span>Top Search Items</span>
+                            </label>
+                        </main>
+                        <!-- End Content -->
+                    </div>
+                    <!-- End Widgets Control -->
+
+                    <!-- Start Backup Manager -->
+                    <div class="board site-control">
+                        <header>
+                            <hgroup>
+                                <h2>Backup Manager</h2>
+                                <span>Show/Hide Widgets</span>
+                            </hgroup>
+                        </header>
+                        <!-- Start Content -->
+                        <main>
+                            <div class="flex-col g-15 m-b-15 b-b-light p-b-15">
+                                <label class="checkbox-label flex pointer align-center g-10">
+                                    <input type="radio" hidden name="backup-interval" checked>
+                                    <span class="icon text-19 r-half w-em h-em">
+                                        <span class="svg text-13 r-half w-em h-em"></span>
+                                    </span>
+                                    <span>Daily</span>
+                                </label>
+                                <label class="checkbox-label flex pointer align-center g-10">
+                                    <input type="radio" hidden name="backup-interval">
+                                    <span class="icon text-19 r-half w-em h-em">
+                                        <span class="svg text-13 r-half w-em h-em"></span>
+                                    </span>
+                                    <span>Weekly</span>
+                                </label>
+                                <label class="checkbox-label flex pointer align-center g-10">
+                                    <input type="radio" hidden name="backup-interval">
+                                    <span class="icon text-19 r-half w-em h-em">
+                                        <span class="svg text-13 r-half w-em h-em"></span>
+                                    </span>
+                                    <span>Monthly</span>
+                                </label>
+                            </div>
+                            <div class="servers">
+                                <label>
+                                    <input type="radio" name="servers" hidden>
+                                    <div class="r-6 flex-col g-10 p-block-10 align-center b-light">
+                                        <svg>
+                                            <use xlink:href="#icon-server"></use>
+                                        </svg>
+                                        <span>Megaman</span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="servers" hidden checked>
+                                    <div class="r-6 flex-col g-10 p-block-10 align-center b-light">
+                                        <svg>
+                                            <use xlink:href="#icon-server"></use>
+                                        </svg>
+                                        <span>Elzero</span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="servers" hidden>
+                                    <div class="r-6 flex-col g-10 p-block-10 align-center b-light">
+                                        <svg>
+                                            <use xlink:href="#icon-server"></use>
+                                        </svg>
+                                        <span>Sigma</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </main>
+                        <!-- End Content -->
+                    </div>
+                    <!-- End Backup Manager -->
+
+
+                </div>
+                <!-- End Boards Container -->
+
+
+        </div>
+        <!-- End Boards Container -->
+
+        </main>
+    </div>
+    </div>
+    <!-- SPRITE SHEET -->
+    <svg id="spritesheet">
+        <symbol id="icon-chart-bar" viewBox="0 0 512 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>chart-bar</title><path d="M332.8 320h38.4c6.4 0 12.8-6.4 12.8-12.8V172.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v134.4c0 6.4 6.4 12.8 12.8 12.8zm96 0h38.4c6.4 0 12.8-6.4 12.8-12.8V76.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v230.4c0 6.4 6.4 12.8 12.8 12.8zm-288 0h38.4c6.4 0 12.8-6.4 12.8-12.8v-70.4c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v70.4c0 6.4 6.4 12.8 12.8 12.8zm96 0h38.4c6.4 0 12.8-6.4 12.8-12.8V108.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v198.4c0 6.4 6.4 12.8 12.8 12.8zM496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path></symbol>
+        <symbol id="icon-gear" viewBox="0 0 512 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>gear</title><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"></path></symbol>
+        <symbol id="icon-user" viewBox="0 0 448 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>user</title><path d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"></path></symbol>
+        <symbol id="icon-diagram-project" viewBox="0 0 576 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>diagram-project</title><path d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z"></path></symbol>
+        <symbol id="icon-graduation-cap" viewBox="0 0 640 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>graduation-cap</title><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"></path></symbol>
+        <symbol id="icon-circle-user" viewBox="0 0 512 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>circle-user</title><path d="M406.5 399.6C387.4 352.9 341.5 320 288 320H224c-53.5 0-99.4 32.9-118.5 79.6C69.9 362.2 48 311.7 48 256C48 141.1 141.1 48 256 48s208 93.1 208 208c0 55.7-21.9 106.2-57.5 143.6zm-40.1 32.7C334.4 452.4 296.6 464 256 464s-78.4-11.6-110.5-31.7c7.3-36.7 39.7-64.3 78.5-64.3h64c38.8 0 71.2 27.6 78.5 64.3zM256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-272a40 40 0 1 1 0-80 40 40 0 1 1 0 80zm-88-40a88 88 0 1 0 176 0 88 88 0 1 0 -176 0z"></path></symbol>
+        <symbol id="icon-file" viewBox="0 0 384 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>file</title><path d="M320 464c8.8 0 16-7.2 16-16V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320zM0 64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64z"></path></symbol>
+        <symbol id="icon-credit-card" viewBox="0 0 576 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>credit-card</title><path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"></path></symbol>
+        <symbol id="icon-magnifying-glass" viewBox="0 0 512 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>magnifying-glass</title><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></symbol>
+        <symbol id="icon-bell" viewBox="0 0 448 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>bell</title><path d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path></symbol>
+        <symbol id="icon-solid-circle-check" viewBox="0 0 512 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>solid-circle-check</title><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path></symbol>
+        <symbol id="icon-solid-circle-xmark" viewBox="0 0 512 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>solid-circle-xmark</title><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"></path></symbol>
+        <symbol id="icon-twitter" viewBox="0 0 512 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>twitter</title><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></symbol>
+        <symbol id="icon-facebook-f" viewBox="0 0 320 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>facebook-f</title><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 448 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>linkedin</title><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></symbol>
+        <symbol id="icon-youtube" viewBox="0 0 576 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>youtube</title><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></symbol>
+        <symbol id="icon-check" viewBox="0 0 448 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>check</title><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></symbol>
+        <symbol id="icon-server" viewBox="0 0 512 512" stroke="currentColor" fill="currentColor" stroke-width="0" height="1em" width="1em"><title>server</title><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"></path></symbol></svg>
+</body>
+
+</html>
+<!-- SPRITE SHEET -->
