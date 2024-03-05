@@ -211,7 +211,7 @@ input:disabled {
   width: fit-content;
   margin-inline: auto;
   position: sticky;
-  inset-block-start: 10px;
+  inset-block-start: 20px;
 }
 .main-nav h2::before {
   content: "";
@@ -273,7 +273,7 @@ input:disabled {
     display: block;
   }
   .main-nav .nav-links {
-    inset-block-start: 65px;
+    inset-block-start: 97.5px;
   }
   .main-nav .nav-links a {
     justify-content: flex-start;
